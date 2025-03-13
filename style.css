@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0a2a43, #081b29);
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Cabeçalho */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 10%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #00abf0;
+    font-weight: 600;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+/* Ícone do menu mobile */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Navbar (Desktop) */
+.navbar {
+    display: flex;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #00abf0;
+}
+
+/* Estilos para telas menores (Menu Mobile) */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 12px 0;
+        font-size: 20px;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+}
+
+/* Seção Principal */
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 80px 10% 0; /* Adicionei um padding-top de 80px */
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        padding-top: 100px; /* Ajuste maior para telas menores */
+    }
+}
+
+.home-content {
+    max-width: 600px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Título */
+.titulo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.titulo span {
+    color: #00abf0;
+    font-style: italic;
+}
+
+/* Descrição */
+.descricao {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Versículo estilizado */
+.versiculo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00abf0;
+    margin: 20px 0;
+    padding: 15px;
+    border-left: 5px solid #00abf0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.versiculo q {
+    font-size: 18px;
+    font-style: italic;
+    color: #fff;
+}
+
+/* Evento */
+.evento {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Slogan */
+.slogan {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00abf0;
+}
+
+/* Botão */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #00abf0, #0083c9);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #0083c9, #00abf0);
+    transform: scale(1.05);
+}
+
+/* Imagem */
+.image-container {
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 480px) {
+    .titulo {
+        font-size: 24px;
+    }
+
+    .descricao {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+
+    .image-container img {
+        max-width: 280px;
+    }
+}
